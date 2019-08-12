@@ -1,0 +1,8 @@
+/build
+/packages
+/modules
+/node_modules
+*.log
+.git
+.env
+.next

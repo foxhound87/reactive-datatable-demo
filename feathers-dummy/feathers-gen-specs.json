@@ -1,0 +1,81 @@
+{
+  "options": {
+    "ver": "1.0.0",
+    "inspectConflicts": false,
+    "semicolons": true,
+    "freeze": [],
+    "ts": false
+  },
+  "app": {
+    "environmentsAllowingSeedData": "",
+    "seedData": false,
+    "name": "feathers-dummy",
+    "description": "Project feathers-dummy",
+    "src": "src",
+    "packager": "yarn@>= 0.18.0",
+    "providers": [
+      "rest",
+      "socketio"
+    ]
+  },
+  "services": {
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "subFolder": "",
+      "fileName": "users",
+      "adapter": "mongoose",
+      "path": "/users",
+      "isAuthEntity": true,
+      "requiresAuth": true,
+      "graphql": false
+    },
+    "profiles": {
+      "name": "profiles",
+      "nameSingular": "profile",
+      "subFolder": "",
+      "fileName": "profiles",
+      "adapter": "mongoose",
+      "path": "/profiles",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": false
+    },
+    "orders": {
+      "name": "orders",
+      "nameSingular": "order",
+      "subFolder": "",
+      "fileName": "orders",
+      "adapter": "mongoose",
+      "path": "/orders",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": false
+    },
+    "products": {
+      "name": "products",
+      "nameSingular": "product",
+      "subFolder": "",
+      "fileName": "products",
+      "adapter": "mongoose",
+      "path": "/products",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": false
+    }
+  },
+  "hooks": {},
+  "authentication": {
+    "strategies": [
+      "local"
+    ],
+    "entity": "users"
+  },
+  "connections": {
+    "mongoose": {
+      "database": "mongodb",
+      "adapter": "mongoose",
+      "connectionString": "mongodb://localhost:27017/feathers_dummy"
+    }
+  }
+}

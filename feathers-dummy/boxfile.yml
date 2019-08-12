@@ -1,0 +1,20 @@
+run.config:
+  engine: nodejs
+  engine.config:
+    runtime: nodejs-11
+    python_version: python-2.7
+  extra_packages:
+    - nginx
+    
+data.mongo:
+  image: nanobox/mongodb:3.4
+
+data.storage:
+  image: nanobox/unfs:0.9
+
+web.api:
+  routes:
+    - '/'
+  start:
+    nginx: nginx -c /app/nginx.api.conf
+    feathers: npm run api

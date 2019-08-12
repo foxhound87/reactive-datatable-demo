@@ -1,0 +1,3 @@
+[submodule "src/modules/reactive-datatable"]
+	path = src/modules/reactive-datatable
+	url = git@github.com:foxhound87/reactive-datatable.git

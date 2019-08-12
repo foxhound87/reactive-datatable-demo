@@ -1,0 +1,55 @@
+{
+  "name": "datatable-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@feathersjs/authentication-client": "^1.0.11",
+    "@feathersjs/feathers": "^3.3.1",
+    "@feathersjs/rest-client": "^1.4.7",
+    "@feathersjs/socketio-client": "^1.2.1",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "copy-to-clipboard": "^3.2.0",
+    "feathers-hooks-common": "^4.20.7",
+    "lodash": "^4.17.15",
+    "mobx": "4.6.0",
+    "mobx-react": "5.3.6",
+    "mobx-react-form": "^2.0.4",
+    "mobx-state-tree": "^3.14.1",
+    "mobx-utils": "^5.4.1",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.8.6",
+    "react-dock": "^0.2.4",
+    "react-dom": "^16.8.6",
+    "react-pagify": "^2.4.0",
+    "react-popup": "^0.10.0",
+    "react-scripts": "3.0.1",
+    "react-sidebar": "^3.0.2",
+    "rfx-core": "^1.6.2",
+    "socket.io-client": "^2.2.0",
+    "tachyons": "^4.11.1",
+    "validatorjs": "^3.15.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
