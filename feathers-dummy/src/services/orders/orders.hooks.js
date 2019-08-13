@@ -39,7 +39,15 @@ let moduleExports = {
         ),
       )
     ],
-    get: [ authenticate('jwt') ],
+    get: [
+      authenticate('jwt'),
+      iff((ctx) => ctx.params.provider,
+        iffElse(hasRoles(['admin']),
+          $restrictToAdmin,
+          $restrictToOwner
+        )
+      ),
+    ],
     create: [ authenticate('jwt') ],
     update: [ authenticate('jwt') ],
     patch: [ authenticate('jwt') ],

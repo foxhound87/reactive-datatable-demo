@@ -19,12 +19,31 @@ let moduleExports = {
     //   all   : authenticate('jwt')
     // !<DEFAULT> code: before
     all: [ authenticate('jwt') ],
-    find: [],
-    get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
+    find: [
+      authenticate('jwt'),
+      iff((ctx) => ctx.params.provider,
+        iffElse(hasPermissions(['admin'], 'all'),
+          checkPermissions({
+            roles: ['admin'],
+            field: 'roles',
+          }),
+          restrictToOwner()
+        ),
+      )
+    ],
+    get: [
+      authenticate('jwt'),
+      iff((ctx) => ctx.params.provider,
+        iffElse(hasRoles(['admin']),
+          $restrictToAdmin,
+          $restrictToOwner
+        )
+      ),
+    ],
+    create: [ authenticate('jwt') ],
+    update: [ authenticate('jwt') ],
+    patch: [ authenticate('jwt') ],
+    remove: [ authenticate('jwt') ]
     // !end
   },
 

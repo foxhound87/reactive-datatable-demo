@@ -47,7 +47,15 @@ let moduleExports = ({ relations }) => ({
         ),
       )
     ],
-    get: [ authenticate('jwt') ],
+    get: [
+      authenticate('jwt'),
+      iff((ctx) => ctx.params.provider,
+        iffElse(hasRoles(['admin']),
+          $restrictToAdmin,
+          $restrictToOwner
+        )
+      ),
+    ],
     create: [ hashPassword() ],
     update: [ hashPassword(), authenticate('jwt') ],
     patch: [ hashPassword(), authenticate('jwt') ],
