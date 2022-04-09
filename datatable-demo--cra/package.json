@@ -17,7 +17,7 @@
     "mobx-react-form": "^2.0.4",
     "mobx-state-tree": "^3.14.1",
     "mobx-utils": "^5.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nprogress": "^0.2.0",
     "react": "^16.8.6",
     "react-dock": "^0.2.4",
