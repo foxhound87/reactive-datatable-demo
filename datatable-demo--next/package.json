@@ -33,7 +33,7 @@
     "mobx-react-matchmedia": "^1.6.0",
     "mobx-state-tree": "^3.14.0",
     "mobx-utils": "5.0.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "^9.0.3",
     "next-cookies": "^1.1.2",
     "next-routes": "^1.4.2",
